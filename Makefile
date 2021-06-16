@@ -20,6 +20,7 @@ SRCS := $(wildcard src/*.c) $(wildcard src/**/*.c)
 OBJS += $(SRCS:.c=.o)
 TARGET := $(NAME).elf
 
+CFLAGS += -g3 -Og -Wall -Wextra
 override CFLAGS += -Iinc $(EXTRA_CFLAGS)
 override LDFLAGS += $(EXTRA_LDFLAGS)
 
